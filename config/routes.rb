@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
-  resources :books, only: [:index, :show]
+  # Books
+  resources :books, only: [:index, :show] do
+    member do
+      post 'borrow', to: 'borrowings#create'   # Borrow a book
+      post 'return', to: 'borrowings#return_book' # Return a book
+    end
+  end
 
-  # Authentication
-  post '/signup', to: 'users#create'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  # Authentication (Explicit Signup/Login Routes)
+  post '/signup', to: 'users#create'  # Explicit signup route
+  post '/login', to: 'sessions#create' # Login
+  delete '/logout', to: 'sessions#destroy' # Logout
 
-  # Borrowing
-  post '/books/:id/borrow', to: 'borrowings#create', as: 'borrow_book'
-  post '/books/:id/return', to: 'borrowings#return_book', as: 'return_book'
+  get '/current_user', to: 'sessions#show'
 
+
+  # Root path
   root 'books#index'
 end
