@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Navbar";  // ✅ Fix: Remove 'components/'
-import Home from "./Home";  // ✅ Fix
-import Login from "./Auth/login";  // ✅ Fix
-import Signup from "./Auth/signup";  // ✅ Fix
-import BookList from "./Books/BookList";  // ✅ Fix
-import BookDetails from "./Books/BookDetails";  // ✅ Fix
-import Profile from "./User/Profile";  // ✅ Fix
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";  // ✅ Correct import (if App.js is inside /components)
+import Home from "./Home";
+import Login from "./Auth/login";
+import Signup from "./Auth/signup";
+import BookList from "./Books/BookList";
+import BookDetails from "./Books/BookDetails";
+import Profile from "./User/Profile";
 
 function App() {
   return (
