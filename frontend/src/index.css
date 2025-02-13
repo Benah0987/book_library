@@ -126,3 +126,70 @@ body {
 .login-button:hover {
   background: #0056b3;
 }
+
+/* Signup & Login Forms */
+.signup-container,
+.login-container {
+  width: 100%;
+  max-width: 420px; /* Slightly wider */
+  margin: 100px auto;
+  padding: 30px; /* Increased padding */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Form Input Fields */
+.signup-input,
+.login-input {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  margin-bottom: 15px; /* Added spacing */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.signup-input:focus,
+.login-input:focus {
+  border-color: #007bff;
+}
+
+/* Buttons */
+.signup-button,
+.login-button {
+  width: 100%; /* Full width button */
+  padding: 12px;
+  margin-top: 10px; /* Space from last input */
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.signup-button:hover,
+.login-button:hover {
+  background: #0056b3;
+}
+
+/* Redirect Text */
+.redirect-text {
+  margin-top: 20px; /* More space */
+  font-size: 15px;
+}
+
+.redirect-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redirect-link:hover {
+  text-decoration: underline;
+}

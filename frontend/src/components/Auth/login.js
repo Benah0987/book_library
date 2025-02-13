@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
+
 
 function Login() {
   return (
@@ -9,6 +11,9 @@ function Login() {
         <input type="password" placeholder="Password" className="login-input" />
         <button type="submit" className="login-button">Login</button>
       </form>
+      <p className="redirect-text">
+        Not registered? <Link to="/signup" className="redirect-link">Sign up here</Link>
+      </p>
     </div>
   );
 }
