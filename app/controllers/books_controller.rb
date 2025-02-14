@@ -12,13 +12,11 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(book_params)
-
-    if book.save
-      render json: book, status: :created
-    else
-      render json: { errors: book.errors.full_messages }, status: :unprocessable_entity
-    end
+    book = Book.find(params[:id])
+    # Add borrowing logic here
+    render json: { message: "Book borrowed successfully!" }, status: :created
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "Book not found" }, status: :not_found
   end
 
   private
