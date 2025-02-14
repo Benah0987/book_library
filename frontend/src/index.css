@@ -193,3 +193,153 @@ body {
 .redirect-link:hover {
   text-decoration: underline;
 }
+
+/* BookList Styles */
+
+.book-list-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.book-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.book-author {
+  font-size: 16px;
+  color: #555;
+}
+
+.book-isbn {
+  font-size: 14px;
+  color: #777;
+}
+
+.availability {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.available {
+  color: green;
+}
+
+.not-available {
+  color: red;
+}
+
+/* Book List Styles */
+.book-list {
+  text-align: center;
+  padding: 20px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.book-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-info {
+  margin-top: 10px;
+}
+
+
+/* Buttons */
+.borrow-button,
+.return-button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.borrow-button {
+  background-color: green;
+  color: white;
+}
+
+.return-button {
+  background-color: red;
+  color: white;
+}
+
+.borrow-button:hover {
+  background-color: darkgreen;
+}
+
+.return-button:hover {
+  background-color: darkred;
+}
+
+.borrow-button:disabled,
+.return-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

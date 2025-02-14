@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -11,13 +13,19 @@ const BookList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="book-list">
       <h2>Book List</h2>
-      <ul>
+      <div className="book-grid">
         {books.map((book) => (
-          <li key={book.id}>{book.title} - {book.author}</li>
+          <Link key={book.id} to={`/books/${book.id}`} className="book-card">
+            <img src={book.image_url} alt={book.title} className="book-image" />
+            <div className="book-info">
+              <h3>{book.title}</h3>
+              <p>{book.author}</p>
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
