@@ -343,3 +343,24 @@ body {
   background-color: gray;
   cursor: not-allowed;
 }
+.logout-button {
+  display: flex;
+  align-items: center;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #d62828;
+}
+
+.logout-icon {
+  margin-right: 5px;
+  font-size: 16px;
+}

@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
-import { AuthContext } from "./AuthContext"; // Adjust path if needed
+import { AuthContext } from "./AuthContext";
 
 function Signup() {
-  const { signup } = useContext(AuthContext); // Access signup function
+  const { signup } = useContext(AuthContext);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,25 +11,8 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    try {
-      await signup(fullName, email, password); // Call signup function from AuthContext
-
-      Swal.fire({
-        title: "Signup Successful!",
-        text: "Your account has been created. Click OK to go to the login page.",
-        icon: "success",
-        confirmButtonText: "OK",
-      }).then(() => {
-        navigate("/login"); // Redirect after success
-      });
-    } catch (error) {
-      Swal.fire({
-        title: "Signup Failed!",
-        text: error.message || "Something went wrong. Try again.",
-        icon: "error",
-      });
-    }
+    await signup(fullName, email, password);
+    navigate("/login"); // Redirect after success
   };
 
   return (

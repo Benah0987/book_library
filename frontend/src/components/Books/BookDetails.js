@@ -1,19 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import BorrowButton from "./BorrowButton";
 import ReturnButton from "./ReturnButton";
-
+import { AuthContext } from "../Auth/AuthContext"; // Import AuthContext
 
 const BookDetails = () => {
   const { id } = useParams(); // Get book ID from URL
   const [book, setBook] = useState(null);
+  const { token } = useContext(AuthContext); // Get token from AuthContext
 
   useEffect(() => {
-    fetch(`http://localhost:8000/books/${id}`)
-      .then((response) => response.json())
-      .then((data) => setBook(data))
-      .catch((error) => console.error("Error fetching book details:", error));
-  }, [id]);
+    const fetchBookDetails = async () => {
+      try {
+        const response = await fetch(`http://localhost:8000/books/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, // Include token
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch book details");
+        }
+
+        const data = await response.json();
+        setBook(data);
+      } catch (error) {
+        console.error("Error fetching book details:", error);
+      }
+    };
+
+    if (token) {
+      fetchBookDetails();
+    }
+  }, [id, token]);
 
   if (!book) {
     return <p className="loading-message">Loading book details...</p>;
