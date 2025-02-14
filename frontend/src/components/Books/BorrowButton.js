@@ -27,8 +27,9 @@ const BorrowButton = ({ bookId }) => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
+        body: JSON.stringify({ book_id: bookId }), // Ensure book_id is sent in the body
       });
-
+      
       if (response.status === 401) {
         Swal.fire({
           title: "Session Expired",
