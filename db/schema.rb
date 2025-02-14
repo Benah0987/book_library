@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_14_215216) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_14_221459) do
   create_table "books", force: :cascade do |t|
     t.string "title", null: false
     t.string "author", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_14_215216) do
     t.boolean "available", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["isbn"], name: "index_books_on_isbn", unique: true
   end
 
@@ -39,6 +40,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_14_215216) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   add_foreign_key "borrowings", "books"
