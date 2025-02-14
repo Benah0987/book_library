@@ -2928,3 +2928,99 @@ Migrating to AddImageUrlToBooks (20250214221459)
   [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Working Effectively with Legacy Code"], ["author", "Michael Feathers"], ["isbn", "978-0131177055"], ["available", 1], ["created_at", "2025-02-14 22:18:52.799968"], ["updated_at", "2025-02-14 22:18:52.799968"], ["image_url", "https://example.com/legacycode.jpg"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mBook Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+Started POST "/signup" for ::1 at 2025-02-15 01:28:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/signup" for ::1 at 2025-02-15 01:28:05 +0300
+Processing by UsersController#create as */*
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"benah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "name"=>"benah"}}
+  Parameters: {"name"=>"benah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "name"=>"benah"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb7def4a270>, params: {"name"=>"benah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"email"=>"[FILTERED]", "name"=>"benah"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb7dee4dae8>, params: {"name"=>"benah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"email"=>"[FILTERED]", "name"=>"benah"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["username", nil], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2025-02-14 22:28:06.208025"], ["updated_at", "2025-02-14 22:28:06.208025"], ["name", "benah"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Exists? (11.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 201 Created in 401ms (Views: 1.3ms | ActiveRecord: 12.5ms (2 queries, 0 cached) | GC: 1.8ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 422 Unprocessable Content in 424ms (Views: 0.3ms | ActiveRecord: 13.6ms (1 query, 0 cached) | GC: 2.4ms)
+
+
+Started POST "/signup" for ::1 at 2025-02-15 01:28:38 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"bena", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "name"=>"bena"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb7dd3d21a0>, params: {"name"=>"bena", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"email"=>"[FILTERED]", "name"=>"bena"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["username", nil], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2025-02-14 22:28:38.927758"], ["updated_at", "2025-02-14 22:28:38.927758"], ["name", "bena"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 201 Created in 371ms (Views: 0.5ms | ActiveRecord: 3.2ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started POST "/login" for ::1 at 2025-02-15 01:28:56 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 348ms (Views: 0.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 01:29:06 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 81ms (Views: 62.5ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 01:29:06 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 5.7ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/3" for ::1 at 2025-02-15 01:29:20 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"3", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 57.6ms)
+
+
+Started GET "/books/3" for ::1 at 2025-02-15 01:29:20 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"3", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 68ms (Views: 0.7ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 50.7ms)
+
+
+Started POST "/books/3/borrow" for ::1 at 2025-02-15 01:29:23 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/books/3/borrow"):
+  
