@@ -1,2 +1,6 @@
 class User < ApplicationRecord
-end
+   
+    has_many :borrowings
+    has_many :books, through: :borrowings
+  end
+  
