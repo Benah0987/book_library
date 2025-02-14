@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources :books, only: [:index, :show]
 
   # Borrowing & Returning Books with a clean URL
- post "/books/:id/borrow", to: "borrowings#create" # ✅ Add this route
-  post "/return/:id", to: "borrowings#update"
+  post "/books/:id/borrow", to: "borrowings#create", as: "borrow_book"
+patch "/books/:id/return", to: "borrowings#update", as: "return_book"
+
   # Authentication (Explicit Signup/Login Routes)
   post '/signup', to: 'users#create'  # Explicit signup route
   post '/login', to: 'sessions#create' # Login
