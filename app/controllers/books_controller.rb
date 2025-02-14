@@ -27,4 +27,13 @@ class BooksController < ApplicationController
   def book_params
     params.permit(:title, :author, :isbn, :image_url)
   end
+
+  private
+
+def set_book
+  @book = Book.find(params[:book_id])
+rescue ActiveRecord::RecordNotFound
+  render json: { error: "Book not found" }, status: :not_found
+end
+
 end

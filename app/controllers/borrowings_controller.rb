@@ -21,7 +21,7 @@ class BorrowingsController < ApplicationController
 
   def return_book
     borrowing = @current_user.borrowings.find_by(book: @book, returned: false)
-
+  
     if borrowing
       borrowing.update(returned: true)
       @book.update(available: true)
@@ -31,13 +31,25 @@ class BorrowingsController < ApplicationController
     end
   end
 
+  def borrowing_status
+    borrowing = @current_user.borrowings.find_by(book_id: params[:id], returned: false)
+  
+    if borrowing
+      render json: { borrowed: true, due_date: borrowing.due_date }, status: :ok
+    else
+      render json: { borrowed: false }, status: :ok
+    end
+  end
+  
+  
+
   private
 
   def set_book
-    @book = Book.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: "Book not found" }, status: :not_found
+    @book = Book.find_by(id: params[:book_id])
+    render json: { error: "Book not found" }, status: :not_found unless @book
   end
+  
 
   def authorize_request
     header = request.headers['Authorization']

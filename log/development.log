@@ -3024,3 +3024,790 @@ Started POST "/books/3/borrow" for ::1 at 2025-02-15 01:29:23 +0300
   
 ActionController::RoutingError (No route matches [POST] "/books/3/borrow"):
   
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (0.2ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.9ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 2]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.7ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 3]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.1ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 4]]
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.3ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 5]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.4ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 6]]
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.7ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 7]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.5ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 8]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (3.4ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 9]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBorrowing Load (1.5ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."book_id" = ?[0m  [["book_id", 10]]
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0201616224"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "The Pragmatic Programmer"], ["author", "Andrew Hunt & David Thomas"], ["isbn", "978-0201616224"], ["available", 1], ["created_at", "2025-02-14 22:30:23.091463"], ["updated_at", "2025-02-14 22:30:23.091463"], ["image_url", "https://imgs.search.brave.com/fgxmNEX0OJye6DpfXZ3N3Vq2KxiBTHoUvp-H5waxBbk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZnJlZWNvZGVjYW1w/Lm9yZy9uZXdzL2Nv/bnRlbnQvaW1hZ2Vz/L3NpemUvdzIwMDAv/MjAyMC8wMS81MW56/OVJPdW9ITC0xLmpw/Zw"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0132350884"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Clean Code"], ["author", "Robert C. Martin"], ["isbn", "978-0132350884"], ["available", 1], ["created_at", "2025-02-14 22:30:23.098591"], ["updated_at", "2025-02-14 22:30:23.098591"], ["image_url", "https://imgs.search.brave.com/f26yMz5DhmYS35c88QpSjUGAMWOhxjKgsrefCZdZTSQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXVnbWVudGVkbWlu/ZC5kZS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMi8wNC9jbGVh/bi1jb2RlLWZlYXR1/cmUuanBn"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-1491904244"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "You Don’t Know JS"], ["author", "Kyle Simpson"], ["isbn", "978-1491904244"], ["available", 1], ["created_at", "2025-02-14 22:30:23.104645"], ["updated_at", "2025-02-14 22:30:23.104645"], ["image_url", "https://imgs.search.brave.com/2eQe6bQxqViZgvOsFVeetyGaQxhhseVwOnyOAJorgtI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZWFs/dG91Z2hjYW5keS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMTIveW91LWRv/bnQta25vdy1qcy15/ZXQtZ2V0dGluZy1z/dGFydGVkLWJlc3Qt/d2ViLWRldmVsb3Bl/ci1ib29rcy5qcGc"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-1593279509"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Eloquent JavaScript"], ["author", "Marijn Haverbeke"], ["isbn", "978-1593279509"], ["available", 1], ["created_at", "2025-02-14 22:30:23.111567"], ["updated_at", "2025-02-14 22:30:23.111567"], ["image_url", "https://imgs.search.brave.com/QByS6n0SEIiEiFZZQMZ9clXGTcrTlzdnPj6HPWww8uI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bGFwYWJvb2tzLmNv/bS9hc3NldHMvaW1h/Z2VzL2Vsb3F1ZW50/amF2YXNjcmlwdC5q/cGc"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0201633610"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Design Patterns"], ["author", "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"], ["isbn", "978-0201633610"], ["available", 1], ["created_at", "2025-02-14 22:30:23.117474"], ["updated_at", "2025-02-14 22:30:23.117474"], ["image_url", "https://imgs.search.brave.com/Vi1ib-d4xpsXd88H_CuIMvtzGVbDT3kddoVE3JR0qc8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qb3Vy/bmFsZGV2Lm55YzMu/Y2RuLmRpZ2l0YWxv/Y2VhbnNwYWNlcy5j/b20vMjAxOS8wOC9n/YW5ncy1vZi1mb3Vy/LWRlc2lnbi1wYXR0/ZXJucy1ib29rLnBu/Zw"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0201485677"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Refactoring"], ["author", "Martin Fowler"], ["isbn", "978-0201485677"], ["available", 1], ["created_at", "2025-02-14 22:30:23.124648"], ["updated_at", "2025-02-14 22:30:23.124648"], ["image_url", "https://imgs.search.brave.com/j7AGDFhka5rnXUQGelVMByfTTz0iDxh9n71ZtGRgQEA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9yZWZh/Y3RvcmluZy5jb20v/cmVmYWN0Mi5qcGc"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0201835953"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "The Mythical Man-Month"], ["author", "Frederick P. Brooks Jr."], ["isbn", "978-0201835953"], ["available", 1], ["created_at", "2025-02-14 22:30:23.131965"], ["updated_at", "2025-02-14 22:30:23.131965"], ["image_url", "https://imgs.search.brave.com/8yA736pGA2H3yh0g7AB4u0mhTSvgHtjPW6WtlRLLQ04/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcy/Lm9kLWNkbi5jb20v/SW1hZ2VUeXBlLTEw/MC8wMjkzLTEvJTdC/Q0UxNTlCMEItQkY3/NS00N0U1LUI1RUEt/QzA4NTkzRjk5NUU3/JTdESU1HMTAwLkpQ/Rw"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0735619678"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Code Complete"], ["author", "Steve McConnell"], ["isbn", "978-0735619678"], ["available", 1], ["created_at", "2025-02-14 22:30:23.143334"], ["updated_at", "2025-02-14 22:30:23.143334"], ["image_url", "https://imgs.search.brave.com/K23J8LcjKWTMhSOBR62FlnfthCEE9rDpT5gfMq0pjrw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vRURD/MjFBRjczNDU1QUVG/MzBEOEUzMjgzMEI0/N0UzQ0Q0QTFGNkZE/MS5qcGVn"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-1133187790"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Introduction to the Theory of Computation"], ["author", "Michael Sipser"], ["isbn", "978-1133187790"], ["available", 1], ["created_at", "2025-02-14 22:30:23.149267"], ["updated_at", "2025-02-14 22:30:23.149267"], ["image_url", "https://imgs.search.brave.com/L-diwk11p-_I4ulFd3x1L-Wre4KqDW_MDpTL5IhDU5w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vMTE1/RTFBMkU0MzY1NUNG/NDQyMDUzMTZFMkIz/RkExNDJENzQyQjMy/Qy5qcGVn"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = ? LIMIT ?[0m  [["isbn", "978-0131177055"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Working Effectively with Legacy Code"], ["author", "Michael Feathers"], ["isbn", "978-0131177055"], ["available", 1], ["created_at", "2025-02-14 22:30:23.156281"], ["updated_at", "2025-02-14 22:30:23.156281"], ["image_url", "https://imgs.search.brave.com/j-wLwKeAfOdpfqlAOE9chyWf5KS9qytXiCsf-NJGdRk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvX2FQ/VlBBZlhfYkNjRF9T/STBTR1FUT0JvQnJv/QVJtQWpjX1N4RjEw/R3RLay5qcGc_YXV0/bz13ZWJwJnM9YjEx/ZDRjZmFiMjk5NjAw/ZGYxMjdmNjk2NTU5/ZWU5MzA5MjYwYjhm/ZQ"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBook Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+Started GET "/current_user" for ::1 at 2025-02-15 01:31:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 37ms (Views: 0.8ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 01:31:02 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 01:32:26 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 70ms (Views: 52.9ms | ActiveRecord: 2.0ms (2 queries, 0 cached) | GC: 12.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 01:32:26 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 5.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-15 01:32:32 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 1.0ms | ActiveRecord: 6.9ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-15 01:32:32 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/books/19/borrow" for ::1 at 2025-02-15 01:32:34 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/books/19/borrow"):
+  
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 01:32:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/borrowings/borrowed_books_count"):
+  
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 01:32:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/borrowings/borrowed_books_count"):
+  
+Started GET "/books" for ::1 at 2025-02-15 01:39:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 49ms (Views: 23.6ms | ActiveRecord: 8.0ms (2 queries, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 01:39:19 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 11.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/13" for 127.0.0.1 at 2025-02-15 01:39:23 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/13" for 127.0.0.1 at 2025-02-15 01:39:23 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/books/13/borrow" for 127.0.0.1 at 2025-02-15 01:39:25 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+Filter chain halted as :set_book rendered or redirected
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-15 01:40:39 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+Filter chain halted as :set_book rendered or redirected
+Completed 404 Not Found in 93ms (Views: 5.4ms | ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-15 01:40:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+Filter chain halted as :set_book rendered or redirected
+Completed 404 Not Found in 42ms (Views: 0.4ms | ActiveRecord: 4.6ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-15 01:54:11 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+Filter chain halted as :set_book rendered or redirected
+Completed 404 Not Found in 44ms (Views: 0.2ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 26.9ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 01:54:50 +0300
+Started GET "/books/13" for ::1 at 2025-02-15 01:54:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 2.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 95ms (Views: 1.0ms | ActiveRecord: 6.0ms (2 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 01:54:51 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 10.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-15 01:54:53 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+Filter chain halted as :set_book rendered or redirected
+Completed 404 Not Found in 27ms (Views: 0.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-15 01:57:53 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{"book_id"=>"13"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:37:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (3.8ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "borrowed_at", "due_date", "returned", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 3], ["book_id", 13], ["borrowed_at", nil], ["due_date", "2025-02-28 22:57:54.270588"], ["returned", 0], ["created_at", "2025-02-14 22:57:54.297543"], ["updated_at", "2025-02-14 22:57:54.297543"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "available" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["available", 0], ["updated_at", "2025-02-14 22:57:54.318466"], ["id", 13]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 118ms (Views: 0.7ms | ActiveRecord: 27.4ms (4 queries, 0 cached) | GC: 5.6ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 01:57:57 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 01:57:57 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-15 01:57:57 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 1.0ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started PATCH "/books/13/return" for ::1 at 2025-02-15 01:58:02 +0300
+Processing by BorrowingsController#return_book as */*
+  Parameters: {"id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:37:in `set_book'
+Filter chain halted as :set_book rendered or redirected
+Completed 404 Not Found in 19ms (Views: 0.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 02:00:41 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:49:in `authorize_request'
+  [1m[36mBorrowing Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."returned" = ?[0m  [["user_id", 3], ["returned", 0]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 58ms (Views: 0.8ms | ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 3.9ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 02:00:41 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:49:in `authorize_request'
+  [1m[36mBorrowing Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."returned" = ?[0m  [["user_id", 3], ["returned", 0]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 8.8ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-15 02:02:55 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 64ms (Views: 1.4ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-15 02:02:55 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/books/13/return_book" for ::1 at 2025-02-15 02:02:58 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/books/13/return_book"):
+  
+Started POST "/books/13/return" for ::1 at 2025-02-15 02:03:36 +0300
+Processing by BorrowingsController#return_book as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:49:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:38:in `set_book'
+  [1m[36mBorrowing Load (0.7ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 13], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:23:in `return_book'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:26:in `return_book'
+  [1m[36mBorrowing Update (6.8ms)[0m  [1m[33mUPDATE "borrowings" SET "returned" = ?, "updated_at" = ? WHERE "borrowings"."id" = ?[0m  [["returned", 1], ["updated_at", "2025-02-14 23:03:36.546774"], ["id", 1]]
+  ↳ app/controllers/borrowings_controller.rb:26:in `return_book'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:26:in `return_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:27:in `return_book'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "available" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["available", 1], ["updated_at", "2025-02-14 23:03:36.574481"], ["id", 13]]
+  ↳ app/controllers/borrowings_controller.rb:27:in `return_book'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:27:in `return_book'
+Completed 200 OK in 93ms (Views: 0.8ms | ActiveRecord: 19.0ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:03:48 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-15 02:03:49 +0300
+Started GET "/current_user" for ::1 at 2025-02-15 02:03:49 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:08:12 +0300
+Started GET "/books/13" for ::1 at 2025-02-15 02:08:12 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:08:12 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 3.5ms (2 queries, 0 cached) | GC: 1.1ms)
+
+
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 3.6ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-15 02:08:15 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"13", "borrowing"=>{"book_id"=>"13"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:49:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (1.6ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "borrowed_at", "due_date", "returned", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 3], ["book_id", 13], ["borrowed_at", nil], ["due_date", "2025-02-28 23:08:15.088553"], ["returned", 0], ["created_at", "2025-02-14 23:08:15.101539"], ["updated_at", "2025-02-14 23:08:15.101539"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.2ms)[0m  [1m[33mUPDATE "books" SET "available" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["available", 0], ["updated_at", "2025-02-14 23:08:15.117818"], ["id", 13]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 49ms (Views: 0.6ms | ActiveRecord: 13.2ms (4 queries, 0 cached) | GC: 7.7ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:08:17 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:08:17 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-15 02:08:17 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13", "book"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 15ms (Views: 1.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/13/borrowing_status" for ::1 at 2025-02-15 02:08:17 +0300
+Processing by BorrowingsController#borrowing_status as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Load (0.2ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 13], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:35:in `borrowing_status'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 11.7ms)
+
+
+Started GET "/books/13/borrowing_status" for ::1 at 2025-02-15 02:08:17 +0300
+Processing by BorrowingsController#borrowing_status as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Load (0.3ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 13], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:35:in `borrowing_status'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:08:22 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:08:22 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 18.6ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 13.6ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 02:08:24 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Count (8.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."returned" = ?[0m  [["user_id", 3], ["returned", 0]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 8.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 02:08:24 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."returned" = ?[0m  [["user_id", 3], ["returned", 0]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:13:40 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:13:40 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-15 02:13:42 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 7.2ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-15 02:13:42 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 9.0ms)
+
+
+Started POST "/books/14/borrow" for ::1 at 2025-02-15 02:13:44 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"book_id"=>"14", "borrowing"=>{"book_id"=>"14"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:49:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (5.9ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "borrowed_at", "due_date", "returned", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 3], ["book_id", 14], ["borrowed_at", nil], ["due_date", "2025-02-28 23:13:44.848874"], ["returned", 0], ["created_at", "2025-02-14 23:13:44.858485"], ["updated_at", "2025-02-14 23:13:44.858485"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (4.4ms)[0m  [1m[33mUPDATE "books" SET "available" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["available", 0], ["updated_at", "2025-02-14 23:13:44.869705"], ["id", 14]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 43ms (Views: 0.4ms | ActiveRecord: 11.2ms (4 queries, 0 cached) | GC: 3.2ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:13:47 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-15 02:13:47 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-15 02:13:47 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books/14/borrowing_status" for ::1 at 2025-02-15 02:13:47 +0300
+Processing by BorrowingsController#borrowing_status as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Load (0.2ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 14], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:35:in `borrowing_status'
+Completed 200 OK in 16ms (Views: 2.7ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/books/14/borrowing_status" for ::1 at 2025-02-15 02:13:47 +0300
+Processing by BorrowingsController#borrowing_status as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Load (0.3ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 14], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:35:in `borrowing_status'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:13:56 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 8.6ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:13:56 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 6.6ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 02:13:58 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."returned" = ?[0m  [["user_id", 3], ["returned", 0]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-15 02:13:58 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:60:in `authorize_request'
+  [1m[36mBorrowing Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."returned" = ?[0m  [["user_id", 3], ["returned", 0]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/borrowings/user_books" for ::1 at 2025-02-15 02:16:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/borrowings/user_books"):
+  
+Started GET "/books" for ::1 at 2025-02-15 02:18:01 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 15.9ms | ActiveRecord: 3.2ms (2 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:18:01 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-15 02:18:03 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-15 02:18:03 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Started GET "/books/14/borrowing_status" for ::1 at 2025-02-15 02:18:03 +0300
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by BorrowingsController#borrowing_status as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:77:in `authorize_request'
+  [1m[36mBorrowing Load (0.2ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 14], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:35:in `borrowing_status'
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/books/14/borrowing_status" for ::1 at 2025-02-15 02:18:03 +0300
+Processing by BorrowingsController#borrowing_status as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:77:in `authorize_request'
+  [1m[36mBorrowing Load (0.2ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = ? AND "borrowings"."book_id" = ? AND "borrowings"."returned" = ? LIMIT ?[0m  [["user_id", 3], ["book_id", 14], ["returned", 0], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:35:in `borrowing_status'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/borrowings/user_books" for ::1 at 2025-02-15 02:18:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/borrowings/user_books"):
+  
+Started GET "/borrowings/user_books" for ::1 at 2025-02-15 02:18:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/borrowings/user_books"):
+  
+Started GET "/books" for ::1 at 2025-02-15 02:18:09 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2025-02-15 02:18:09 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `authorize_request'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 14.9ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
