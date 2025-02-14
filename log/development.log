@@ -1,0 +1,2629 @@
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/signup" for ::1 at 2025-02-12 15:28:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started POST "/signup" for ::1 at 2025-02-12 15:30:03 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Benayah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"Benayah", "email"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 1ms (ActiveRecord: 32.1ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (3.1.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.9) lib/rack/etag.rb:29:in `call'
+rack (3.1.9) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.9) lib/rack/head.rb:15:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.9) lib/rack/method_override.rb:28:in `call'
+rack (3.1.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/signup" for ::1 at 2025-02-12 15:30:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Benayah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"Benayah", "email"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 1ms (ActiveRecord: 25.1ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (3.1.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.9) lib/rack/etag.rb:29:in `call'
+rack (3.1.9) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.9) lib/rack/head.rb:15:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.9) lib/rack/method_override.rb:28:in `call'
+rack (3.1.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/signup" for ::1 at 2025-02-12 15:31:52 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Benayah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"Benayah", "email"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 422 Unprocessable Content in 119ms (Views: 0.6ms | ActiveRecord: 16.6ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started POST "/signup" for ::1 at 2025-02-12 15:32:16 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Benayah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"Benayah", "email"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 422 Unprocessable Content in 12ms (Views: 0.2ms | ActiveRecord: 5.8ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/signup" for ::1 at 2025-02-12 15:32:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Benayah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"Benayah", "email"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f981924e858>, params: {"name"=>"Benayah", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"Benayah", "email"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Benayah"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2025-02-12 12:32:59.842958"], ["updated_at", "2025-02-12 12:32:59.842958"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 201 Created in 351ms (Views: 0.5ms | ActiveRecord: 40.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2025-02-12 15:34:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/login" for ::1 at 2025-02-12 15:34:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started POST "/login" for ::1 at 2025-02-12 15:34:42 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (3.1.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.9) lib/rack/etag.rb:29:in `call'
+rack (3.1.9) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.9) lib/rack/head.rb:15:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.9) lib/rack/method_override.rb:28:in `call'
+rack (3.1.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2025-02-12 15:34:45 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (3.1.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.9) lib/rack/etag.rb:29:in `call'
+rack (3.1.9) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.9) lib/rack/head.rb:15:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.9) lib/rack/method_override.rb:28:in `call'
+rack (3.1.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2025-02-12 15:36:11 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 324ms (Views: 0.8ms | ActiveRecord: 10.4ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books" for ::1 at 2025-02-12 15:39:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (19.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 86ms (Views: 8.8ms | ActiveRecord: 44.7ms (1 query, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/books/1" for ::1 at 2025-02-12 15:43:03 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 78ms (Views: 11.7ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/1/borrow%0A" for ::1 at 2025-02-12 15:43:42 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/books/1/borrow%0A"):
+  
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:44:53 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 22ms (Views: 0.2ms | ActiveRecord: 2.9ms (2 queries, 0 cached) | GC: 3.0ms)
+
+
+Started POST "/login" for ::1 at 2025-02-12 15:44:58 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 307ms (Views: 0.7ms | ActiveRecord: 5.4ms (1 query, 0 cached) | GC: 3.8ms)
+
+
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:45:05 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.2ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 1.5ms)
+
+
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:45:06 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.2ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 1.5ms)
+
+
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:45:33 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 12.8ms (2 queries, 0 cached) | GC: 1.0ms)
+
+
+  
+NoMethodError (undefined method `borrowings' for nil:NilClass
+
+      borrowing = current_user.borrowings.create(book: @bo...
+                              ^^^^^^^^^^^):
+  
+app/controllers/borrowings_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2025-02-12 15:46:28 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 299ms (Views: 0.6ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:46:33 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+NoMethodError (undefined method `borrowings' for nil:NilClass
+
+      borrowing = current_user.borrowings.create(book: @bo...
+                              ^^^^^^^^^^^):
+  
+app/controllers/borrowings_controller.rb:9:in `create'
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:46:46 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 34ms (Views: 0.3ms | ActiveRecord: 9.1ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:47:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 74ms (Views: 0.4ms | ActiveRecord: 31.1ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started POST "/login" for ::1 at 2025-02-12 15:47:57 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 300ms (Views: 0.8ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:48:03 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:43:in `current_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:9:in `create'
+  [1m[36mBorrowing Create (18.9ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "due_date", "returned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["book_id", 1], ["due_date", "2025-02-26"], ["returned", false], ["created_at", "2025-02-12 12:48:03.115243"], ["updated_at", "2025-02-12 12:48:03.115243"]]
+  ↳ app/controllers/borrowings_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:10:in `create'
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "1234567890"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:10:in `create'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", false], ["updated_at", "2025-02-12 12:48:03.160045"], ["id", 1]]
+  ↳ app/controllers/borrowings_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:10:in `create'
+Completed 200 OK in 149ms (Views: 1.0ms | ActiveRecord: 42.8ms (5 queries, 0 cached) | GC: 29.1ms)
+
+
+Started POST "/login" for ::1 at 2025-02-12 15:48:46 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 345ms (Views: 0.8ms | ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/1/borrow" for ::1 at 2025-02-12 15:48:50 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Completed 422 Unprocessable Content in 35ms (Views: 0.3ms | ActiveRecord: 6.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/1/return" for ::1 at 2025-02-12 15:49:52 +0300
+Processing by BorrowingsController#return_book as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+  [1m[36mBorrowing Load (1.1ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."book_id" = $2 AND "borrowings"."returned" = $3 LIMIT $4[0m  [["user_id", 2], ["book_id", 1], ["returned", false], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:19:in `return_book'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:22:in `return_book'
+  [1m[36mBorrowing Update (2.4ms)[0m  [1m[33mUPDATE "borrowings" SET "returned" = $1, "updated_at" = $2 WHERE "borrowings"."id" = $3[0m  [["returned", true], ["updated_at", "2025-02-12 12:49:52.399400"], ["id", 1]]
+  ↳ app/controllers/borrowings_controller.rb:22:in `return_book'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:22:in `return_book'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:23:in `return_book'
+  [1m[36mBook Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "1234567890"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:23:in `return_book'
+  [1m[36mBook Update (1.0ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", true], ["updated_at", "2025-02-12 12:49:52.426529"], ["id", 1]]
+  ↳ app/controllers/borrowings_controller.rb:23:in `return_book'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:23:in `return_book'
+Completed 200 OK in 99ms (Views: 0.3ms | ActiveRecord: 25.3ms (6 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/current_user" for ::1 at 2025-02-12 15:52:34 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/current_user"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/current_user" for ::1 at 2025-02-12 15:53:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Completed 200 OK in 64ms (Views: 1.2ms | ActiveRecord: 13.2ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2025-02-12 15:54:10 +0300
+Processing by SessionsController#destroy as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/1/return" for ::1 at 2025-02-12 15:54:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/books/1/return"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-13 12:34:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 436ms (Views: 0.6ms | ActiveRecord: 33.2ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:35:30 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 0.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:35:30 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-13 12:42:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 332ms (Views: 0.5ms | ActiveRecord: 14.9ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:43:05 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:43:05 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:43:29 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:43:29 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:44:23 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:44:23 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:50:35 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 67ms (Views: 0.9ms | ActiveRecord: 9.7ms (1 query, 0 cached) | GC: 6.1ms)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2025-02-13 12:50:36 +0300
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:36:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books" for ::1 at 2025-02-13 16:18:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (16.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 94ms (Views: 4.3ms | ActiveRecord: 41.7ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-13 16:18:48 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateActiveStorageTables (20250213132245)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (48.9ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250213132245') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/books" for ::1 at 2025-02-13 16:31:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (22.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 50ms (Views: 4.0ms | ActiveRecord: 32.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-13 16:31:25 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-13 16:31:27 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-13 16:31:27 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 3.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "1234567890"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddImageUrlToBooks (20250213133458)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "books" ADD "image_url" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250213133458') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "1234567890"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "0987654321"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (4.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (3.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (5086.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_library_development"[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (53.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_library_development"[0m
+  [1m[35m (116.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "book_library_test"[0m
+  [1m[35m (280.1ms)[0m  [1m[35mCREATE DATABASE "book_library_development" ENCODING = 'unicode'[0m
+  [1m[35m (188.2ms)[0m  [1m[35mCREATE DATABASE "book_library_test" ENCODING = 'unicode'[0m
+  [1m[35m (81.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (43.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-13 13:37:14.134396', '2025-02-13 13:37:14.134402') RETURNING "key"[0m
+Migrating to CreateBooks (20250211115128)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "isbn" character varying, "available" boolean, "image_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250211115128') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20250211115647)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (61.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250211115647') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBorrowings (20250211120524)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "borrowings" ("id" bigserial primary key, "user_id" bigint NOT NULL, "book_id" bigint NOT NULL, "due_date" date, "returned" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_64d35f133d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2d6421032c"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE INDEX "index_borrowings_on_user_id" ON "borrowings" ("user_id")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE INDEX "index_borrowings_on_book_id" ON "borrowings" ("book_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250211120524') RETURNING "version"[0m
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20250213132245)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250213132245') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddImageUrlToBooks (20250213133458)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "books" ADD "image_url" character varying[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5321829373436298975)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test User"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2025-02-13 13:45:26.942391"], ["updated_at", "2025-02-13 13:45:26.942391"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "1234567890"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "0987654321"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (19.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "1234567890"], ["LIMIT", 1]]
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["isbn", "1234567890"], ["available", true], ["image_url", "https://example.com/1984.jpg"], ["created_at", "2025-02-13 13:45:27.002523"], ["updated_at", "2025-02-13 13:45:27.002523"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "0987654321"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["isbn", "0987654321"], ["available", true], ["image_url", "https://example.com/to-kill-a-mockingbird.jpg"], ["created_at", "2025-02-13 13:45:27.019726"], ["updated_at", "2025-02-13 13:45:27.019726"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780201616224"], ["LIMIT", 1]]
+  [1m[36mBook Create (7.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Pragmatic Programmer"], ["author", "Andrew Hunt"], ["isbn", "9780201616224"], ["available", true], ["image_url", "https://example.com/pragmatic-programmer.jpg"], ["created_at", "2025-02-13 13:45:27.033302"], ["updated_at", "2025-02-13 13:45:27.033302"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780132350884"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Clean Code"], ["author", "Robert C. Martin"], ["isbn", "9780132350884"], ["available", true], ["image_url", "https://example.com/clean-code.jpg"], ["created_at", "2025-02-13 13:45:27.054203"], ["updated_at", "2025-02-13 13:45:27.054203"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780321584106"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Eloquent Ruby"], ["author", "Russ Olsen"], ["isbn", "9780321584106"], ["available", true], ["image_url", "https://example.com/eloquent-ruby.jpg"], ["created_at", "2025-02-13 13:45:27.066228"], ["updated_at", "2025-02-13 13:45:27.066228"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9781491904244"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You Don't Know JS"], ["author", "Kyle Simpson"], ["isbn", "9781491904244"], ["available", true], ["image_url", "https://example.com/ydkjs.jpg"], ["created_at", "2025-02-13 13:45:27.076478"], ["updated_at", "2025-02-13 13:45:27.076478"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780596517748"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "JavaScript: The Good Parts"], ["author", "Douglas Crockford"], ["isbn", "9780596517748"], ["available", true], ["image_url", "https://example.com/js-good-parts.jpg"], ["created_at", "2025-02-13 13:45:27.085854"], ["updated_at", "2025-02-13 13:45:27.085854"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780134598627"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Ruby on Rails Tutorial"], ["author", "Michael Hartl"], ["isbn", "9780134598627"], ["available", true], ["image_url", "https://example.com/rails-tutorial.jpg"], ["created_at", "2025-02-13 13:45:27.104880"], ["updated_at", "2025-02-13 13:45:27.104880"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780201633610"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Design Patterns"], ["author", "Erich Gamma"], ["isbn", "9780201633610"], ["available", true], ["image_url", "https://example.com/design-patterns.jpg"], ["created_at", "2025-02-13 13:45:27.114928"], ["updated_at", "2025-02-13 13:45:27.114928"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780201485677"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Refactoring"], ["author", "Martin Fowler"], ["isbn", "9780201485677"], ["available", true], ["image_url", "https://example.com/refactoring.jpg"], ["created_at", "2025-02-13 13:45:27.123843"], ["updated_at", "2025-02-13 13:45:27.123843"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books" for ::1 at 2025-02-13 16:45:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (86.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 148ms (Views: -44.0ms | ActiveRecord: 164.1ms (1 query, 0 cached) | GC: 86.8ms)
+
+
+Started GET "/books" for ::1 at 2025-02-13 16:45:58 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books" for ::1 at 2025-02-14 09:44:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (23.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 273ms (Views: 52.1ms | ActiveRecord: 61.7ms (1 query, 0 cached) | GC: 33.3ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:44:44 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:49:20 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:49:20 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 10.6ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 7.2ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:49:56 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:49:56 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:50:04 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (8.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 8.8ms (1 query, 0 cached) | GC: 2.6ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:50:04 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:50:26 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 13.9ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:50:26 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books" for ::1 at 2025-02-14 09:51:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (29.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 301ms (Views: 140.3ms | ActiveRecord: 62.5ms (1 query, 0 cached) | GC: 73.2ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 09:51:13 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 10:00:20 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (41.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 66ms (Views: 5.5ms | ActiveRecord: 56.5ms (1 query, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 10:00:20 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (14.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 32ms (Views: 16.8ms | ActiveRecord: 13.9ms (1 query, 0 cached) | GC: 7.6ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books/4" for ::1 at 2025-02-14 10:03:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (21.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 152ms (Views: 2.7ms | ActiveRecord: 58.0ms (1 query, 0 cached) | GC: 25.7ms)
+
+
+Started GET "/books/4" for ::1 at 2025-02-14 10:03:50 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 16ms (Views: 1.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/borrow/4" for ::1 at 2025-02-14 10:04:00 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/borrow/4"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "1234567890"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "0987654321"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (6.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (2.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (2.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (2.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (3.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (3.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (3.6ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (2.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (2.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Destroy (1.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "1234567890"], ["LIMIT", 1]]
+  [1m[36mBook Create (3.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "1984"], ["author", "George Orwell"], ["isbn", "1234567890"], ["available", true], ["image_url", "https://imgs.search.brave.com/bF_PZc9ihCeXnW6ltpWXaeRDulOumJBdayjBlvBtkw8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg2Lzll/Lzc2Lzg2OWU3Njg0/NWQ1ZGMyODA2Y2Zm/YWI3NmVhNWU4NDNj/LmpwZw"], ["created_at", "2025-02-14 07:14:50.276026"], ["updated_at", "2025-02-14 07:14:50.276026"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "0987654321"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "To Kill a Mockingbird"], ["author", "Harper Lee"], ["isbn", "0987654321"], ["available", true], ["image_url", "https://imgs.search.brave.com/j1W9ihXPW7Vlh-a68_DE1aerpM9S1hUvAuLDWaicags/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vNTdD/QjA1MjQ2M0M2RDUw/NDVEREQ5OTZFQ0FE/NzkwNjRGQkUzMDUx/Ni5qcGVn"], ["created_at", "2025-02-14 07:14:50.291592"], ["updated_at", "2025-02-14 07:14:50.291592"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780201616224"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Pragmatic Programmer"], ["author", "Andrew Hunt"], ["isbn", "9780201616224"], ["available", true], ["image_url", "https://imgs.search.brave.com/Vw6rhjjVlz7D4dslwka7ToVim1XESH3AYFuIi5Ems-o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFhMURZYWVjWkwu/anBn"], ["created_at", "2025-02-14 07:14:50.303367"], ["updated_at", "2025-02-14 07:14:50.303367"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780132350884"], ["LIMIT", 1]]
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Clean Code"], ["author", "Robert C. Martin"], ["isbn", "9780132350884"], ["available", true], ["image_url", "https://imgs.search.brave.com/v_M6I5WyyKgISuLIgEYUCuOApHWqOly5EqGkUTaX91o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sZWFy/bmluZy5vcmVpbGx5/LmNvbS9saWJyYXJ5/L2NvdmVyLzk3ODAx/MzYwODMyMzgvMjUw/dy8.jpeg"], ["created_at", "2025-02-14 07:14:50.316567"], ["updated_at", "2025-02-14 07:14:50.316567"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780321584106"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Eloquent Ruby"], ["author", "Russ Olsen"], ["isbn", "9780321584106"], ["available", true], ["image_url", "https://imgs.search.brave.com/LUWfd1CYHI1-yQgwvWFyf9ztCT1_0kNW7WQSUK2uoL0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vNEQ4/NzU1N0U3RTlCNjkw/M0JGRjQwNjg4RkRF/RTFGQzcwRTdDNEI2/Qy5qcGVn"], ["created_at", "2025-02-14 07:14:50.329416"], ["updated_at", "2025-02-14 07:14:50.329416"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9781491904244"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The road to React"], ["author", "Kyle Simpson"], ["isbn", "9781491904244"], ["available", true], ["image_url", "https://imgs.search.brave.com/jDYXtvqKnZh0wk7EJA3AQzdZgjHCYvRUeGoCgXbocjQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxdm5kUlhnQmdM/LmpwZw"], ["created_at", "2025-02-14 07:14:50.341644"], ["updated_at", "2025-02-14 07:14:50.341644"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780596517748"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "JavaScript: The Good Parts"], ["author", "Douglas Crockford"], ["isbn", "9780596517748"], ["available", true], ["image_url", "https://imgs.search.brave.com/Utyg2HcS_n3ZndlE6JhyX7JbwHtkVCTR5e6GJlxm_j8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vODE2/NjRBNjIzRkJCRjU2/QTgzMzc1ODY4M0Q5/QjM5OUVDNTFGNDY3/OS5qcGVn"], ["created_at", "2025-02-14 07:14:50.354497"], ["updated_at", "2025-02-14 07:14:50.354497"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780134598627"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Ruby on Rails Tutorial"], ["author", "Michael Hartl"], ["isbn", "9780134598627"], ["available", true], ["image_url", "https://imgs.search.brave.com/OQY2eoCNGBYfPiMcBfIzXWbTteESDRFcWefcOMwO8dE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sZWFy/bmluZy5vcmVpbGx5/LmNvbS9saWJyYXJ5/L2NvdmVyLzk3ODAx/MzgwNTAwNjEvMjUw/dy8.jpeg"], ["created_at", "2025-02-14 07:14:50.369279"], ["updated_at", "2025-02-14 07:14:50.369279"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780201633610"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Design Patterns"], ["author", "Erich Gamma"], ["isbn", "9780201633610"], ["available", true], ["image_url", "https://imgs.search.brave.com/Vi1ib-d4xpsXd88H_CuIMvtzGVbDT3kddoVE3JR0qc8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qb3Vy/bmFsZGV2Lm55YzMu/Y2RuLmRpZ2l0YWxv/Y2VhbnNwYWNlcy5j/b20vMjAxOS8wOC9n/YW5ncy1vZi1mb3Vy/LWRlc2lnbi1wYXR0/ZXJucy1ib29rLnBu/Zw"], ["created_at", "2025-02-14 07:14:50.379969"], ["updated_at", "2025-02-14 07:14:50.379969"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "9780201485677"], ["LIMIT", 1]]
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "isbn", "available", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Refactoring"], ["author", "Martin Fowler"], ["isbn", "9780201485677"], ["available", true], ["image_url", "https://imgs.search.brave.com/dlpzyMgbmb1V1k6u2lH9tIwCK4MWs6H06sr5AW4ddjg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vNUQw/NUI5QkU2MjczQjAw/N0ZGMjUwOEE0MTBF/NzMzMkEyQUY0MjND/Ni5qcGVn"], ["created_at", "2025-02-14 07:14:50.391217"], ["updated_at", "2025-02-14 07:14:50.391217"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books/4" for ::1 at 2025-02-14 10:17:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 404 Not Found in 155ms (ActiveRecord: 46.1ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=4):
+  
+app/controllers/books_controller.rb:10:in `show'
+Started GET "/books/4" for ::1 at 2025-02-14 10:17:06 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 404 Not Found in 14ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=4):
+  
+app/controllers/books_controller.rb:10:in `show'
+Started GET "/books" for ::1 at 2025-02-14 10:17:10 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 10:17:10 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/books/18" for ::1 at 2025-02-14 10:17:15 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/18" for ::1 at 2025-02-14 10:17:15 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/borrow/18" for ::1 at 2025-02-14 10:17:18 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/borrow/18"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/borrow/18" for ::1 at 2025-02-14 10:20:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"18", "borrowing"=>{}}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 70ms (Views: 0.6ms | ActiveRecord: 40.2ms (2 queries, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 10:42:17 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (35.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 60ms (Views: 6.5ms | ActiveRecord: 51.4ms (1 query, 0 cached) | GC: 3.9ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 10:42:17 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 10:42:19 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 48ms (Views: 16.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 42.7ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 10:42:19 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 7.7ms)
+
+
+Started POST "/login" for ::1 at 2025-02-14 10:49:45 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 9.8ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (can't cast ActionController::Parameters):
+
+Causes:
+TypeError (can't cast ActionController::Parameters)
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/books" for ::1 at 2025-02-14 10:49:50 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 10:49:50 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/signup" for ::1 at 2025-02-14 12:20:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"jane", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"jane", "email"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb94af518a0>, params: {"name"=>"jane", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"name"=>"jane", "email"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "jane"], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2025-02-14 09:20:54.386156"], ["updated_at", "2025-02-14 09:20:54.386156"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 201 Created in 302ms (Views: 0.3ms | ActiveRecord: 47.8ms (2 queries, 0 cached) | GC: 1.6ms)
+
+
+Started POST "/login" for ::1 at 2025-02-14 12:22:56 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 275ms (Views: 0.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 12:23:09 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 62ms (Views: 35.4ms | ActiveRecord: 13.0ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 12:23:10 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 65ms (Views: 41.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 58.7ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-14 12:23:16 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-14 12:23:16 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/13/borrow" for ::1 at 2025-02-14 12:23:18 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/books/13/borrow"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/borrow/13" for ::1 at 2025-02-14 12:25:44 +0300
+Started POST "/borrow/13" for ::1 at 2025-02-14 12:25:44 +0300
+Processing by BorrowingsController#create as */*
+Processing by BorrowingsController#create as */*
+  Parameters: {"userId"=>1, "id"=>"13", "borrowing"=>{}}
+  Parameters: {"userId"=>1, "id"=>"13", "borrowing"=>{}}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.3ms | ActiveRecord: 7.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 25ms (Views: 0.2ms | ActiveRecord: 9.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-14 12:28:01 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 26ms (Views: 0.6ms | ActiveRecord: 7.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/13" for ::1 at 2025-02-14 12:28:01 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/borrow/13" for ::1 at 2025-02-14 12:28:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/borrow/13"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/borrow/13" for ::1 at 2025-02-14 12:33:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/borrow/13"):
+  
+Started POST "/login" for ::1 at 2025-02-14 12:34:18 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 309ms (Views: 0.8ms | ActiveRecord: 13.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 12:34:22 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 46ms (Views: 35.2ms | ActiveRecord: 7.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 12:34:22 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-14 12:34:23 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-14 12:34:23 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/borrow/14" for ::1 at 2025-02-14 12:34:25 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/borrow/14"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/books/14/borrow" for ::1 at 2025-02-14 12:50:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"14", "borrowing"=>{}}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 59ms (Views: 0.4ms | ActiveRecord: 26.3ms (2 queries, 0 cached) | GC: 16.7ms)
+
+
+Started POST "/login" for ::1 at 2025-02-14 12:51:34 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 200 OK in 368ms (Views: 0.5ms | ActiveRecord: 8.9ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 12:51:42 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 12:51:42 +0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 12:51:44 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 55ms (Views: 0.5ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 50.8ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 12:51:44 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started POST "/books/12/borrow" for ::1 at 2025-02-14 12:51:47 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"12", "borrowing"=>{}}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 0.3ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 12:57:07 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 15ms (Views: 1.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 12:57:07 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10:in `show'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 22.1ms)
+
+
+Started POST "/books/12/borrow" for ::1 at 2025-02-14 13:40:44 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"12", "borrowing"=>{}}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:33:in `set_book'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:44:in `current_user'
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 37ms (Views: 0.7ms | ActiveRecord: 9.8ms (2 queries, 0 cached) | GC: 0.9ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 13:55:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+  
+NameError (uninitialized constant ApplicationController::JsonWebToken
+
+    decoded = JsonWebToken.decode(token)
+              ^^^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:11:in `authorize_request'
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 13:59:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+  
+NoMethodError (undefined method `secrets' for #<BookLibrary::Application>
+
+  SECRET_KEY = Rails.application.secrets.secret_key_base |...
+                                ^^^^^^^^):
+  
+lib/json_web_token.rb:4:in `<class:JsonWebToken>'
+lib/json_web_token.rb:3:in `<main>'
+app/controllers/application_controller.rb:11:in `authorize_request'
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 14:00:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 45ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/signup" for ::1 at 2025-02-14 14:01:39 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"antony", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "user"=>{"name"=>"antony", "email"=>"[FILTERED]"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 40.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 14:45:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 200 OK in 373ms (Views: 0.3ms | ActiveRecord: 20.9ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 14:45:56 +0300
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/books_controller.rb:2:in `<class:BooksController>'
+app/controllers/books_controller.rb:1:in `<main>'
+Started GET "/books" for ::1 at 2025-02-14 14:45:56 +0300
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/books_controller.rb:2:in `<class:BooksController>'
+app/controllers/books_controller.rb:1:in `<main>'
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/books" for ::1 at 2025-02-14 14:49:09 +0300
+Started GET "/current_user" for ::1 at 2025-02-14 14:49:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as */*
+Processing by BooksController#index as */*
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass
+
+      @current_user = User.find(decoded[:user_id])
+                                       ^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 613ms (Views: 0.3ms | ActiveRecord: 1018.8ms (1 query, 0 cached) | GC: 161.7ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 14:49:10 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 5.6ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 14:49:10 +0300
+Processing by BooksController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass
+
+      @current_user = User.find(decoded[:user_id])
+                                       ^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:12:in `authorize_request'
+Started GET "/books" for ::1 at 2025-02-14 14:52:00 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 23.3ms | ActiveRecord: 8.8ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-14 14:52:21 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass
+
+      @current_user = User.find(decoded[:user_id])
+                                       ^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:12:in `authorize_request'
+Started GET "/books/14" for ::1 at 2025-02-14 14:52:21 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass
+
+      @current_user = User.find(decoded[:user_id])
+                                       ^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:12:in `authorize_request'
+Started GET "/books/14" for ::1 at 2025-02-14 14:53:45 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 4.2ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started POST "/books/14/borrow" for ::1 at 2025-02-14 14:53:49 +0300
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/borrowings_controller.rb:2:in `<class:BorrowingsController>'
+app/controllers/borrowings_controller.rb:1:in `<main>'
+Started POST "/books/14/borrow" for ::1 at 2025-02-14 14:55:28 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"14", "borrowing"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (6.2ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "due_date", "returned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["book_id", 14], ["due_date", "2025-02-28"], ["returned", false], ["created_at", "2025-02-14 11:55:28.892646"], ["updated_at", "2025-02-14 11:55:28.892646"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "9780132350884"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.7ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", false], ["updated_at", "2025-02-14 11:55:28.922393"], ["id", 14]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 159ms (Views: 0.9ms | ActiveRecord: 36.5ms (5 queries, 0 cached) | GC: 4.5ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 14:55:32 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/14" for ::1 at 2025-02-14 14:55:32 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"14", "book"=>{}}
+Started GET "/current_user" for ::1 at 2025-02-14 14:55:33 +0300
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 19ms (Views: 0.8ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/return/14" for ::1 at 2025-02-14 14:55:36 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/return/14"):
+  
+Started POST "/return/14" for ::1 at 2025-02-14 14:55:39 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/return/14"):
+  
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 22:47:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 200 OK in 320ms (Views: 0.2ms | ActiveRecord: 26.8ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 22:47:29 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (3.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 35.9ms | ActiveRecord: 8.7ms (2 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 22:47:29 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-14 22:47:37 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 61ms (Views: 0.4ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 52.8ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-14 22:47:37 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started POST "/books/19/borrow" for ::1 at 2025-02-14 22:47:40 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"19", "borrowing"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (8.6ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "due_date", "returned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["book_id", 19], ["due_date", "2025-02-28"], ["returned", false], ["created_at", "2025-02-14 19:47:40.328592"], ["updated_at", "2025-02-14 19:47:40.328592"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "9780201633610"], ["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", false], ["updated_at", "2025-02-14 19:47:40.362629"], ["id", 19]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 81ms (Views: 0.9ms | ActiveRecord: 35.5ms (5 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 22:47:44 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-14 22:47:44 +0300
+Started GET "/current_user" for ::1 at 2025-02-14 22:47:44 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 22:47:49 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 22:47:49 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 14.2ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-14 22:47:55 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-14 22:47:55 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/19/return" for ::1 at 2025-02-14 22:48:11 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/books/19/return"):
+  
+Started PATCH "/books/19/return" for ::1 at 2025-02-14 22:52:36 +0300
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for BorrowingsController):
+  
+actionpack (7.2.2.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+rack (3.1.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.10) lib/rack/etag.rb:29:in `call'
+rack (3.1.10) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.10) lib/rack/head.rb:15:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.10) lib/rack/method_override.rb:28:in `call'
+rack (3.1.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started PATCH "/books/19/return" for ::1 at 2025-02-14 22:52:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for BorrowingsController):
+  
+actionpack (7.2.2.1) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+rack (3.1.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.10) lib/rack/etag.rb:29:in `call'
+rack (3.1.10) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.10) lib/rack/head.rb:15:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.10) lib/rack/method_override.rb:28:in `call'
+rack (3.1.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.2.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started PATCH "/books/19/return" for ::1 at 2025-02-14 22:57:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BorrowingsController#return_book as */*
+  Parameters: {"id"=>"19", "borrowing"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mBorrowing Load (0.6ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."book_id" = $2 AND "borrowings"."returned" = $3 LIMIT $4[0m  [["user_id", 2], ["book_id", 19], ["returned", false], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `return_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mBorrowing Update (4.0ms)[0m  [1m[33mUPDATE "borrowings" SET "returned" = $1, "updated_at" = $2 WHERE "borrowings"."id" = $3[0m  [["returned", true], ["updated_at", "2025-02-14 19:57:50.576522"], ["id", 2]]
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mBook Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "9780201633610"], ["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mBook Update (0.6ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", true], ["updated_at", "2025-02-14 19:57:50.598944"], ["id", 19]]
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+Completed 200 OK in 99ms (Views: 0.4ms | ActiveRecord: 55.3ms (6 queries, 0 cached) | GC: 3.5ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:03:50 +0300
+Started GET "/books/19" for ::1 at 2025-02-14 23:03:50 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 0.3ms | ActiveRecord: 40.1ms (1 query, 0 cached) | GC: 26.5ms)
+
+
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 83ms (Views: 0.7ms | ActiveRecord: 27.2ms (2 queries, 0 cached) | GC: 34.5ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:03:50 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 61ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started POST "/books/19/borrow" for ::1 at 2025-02-14 23:03:54 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"19", "borrowing"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (4.8ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "due_date", "returned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["book_id", 19], ["due_date", "2025-02-28"], ["returned", false], ["created_at", "2025-02-14 20:03:54.345559"], ["updated_at", "2025-02-14 20:03:54.345559"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "9780201633610"], ["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.8ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", false], ["updated_at", "2025-02-14 20:03:54.382592"], ["id", 19]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 72ms (Views: 0.8ms | ActiveRecord: 18.4ms (5 queries, 0 cached) | GC: 11.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:03:56 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/books/19" for ::1 at 2025-02-14 23:03:56 +0300
+Started GET "/current_user" for ::1 at 2025-02-14 23:03:56 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"19", "book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 1.6ms)
+
+
+Started PATCH "/books/19/return" for ::1 at 2025-02-14 23:03:59 +0300
+Processing by BorrowingsController#return_book as */*
+  Parameters: {"id"=>"19", "borrowing"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mBorrowing Load (1.2ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."book_id" = $2 AND "borrowings"."returned" = $3 LIMIT $4[0m  [["user_id", 2], ["book_id", 19], ["returned", false], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `return_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mBorrowing Update (8.5ms)[0m  [1m[33mUPDATE "borrowings" SET "returned" = $1, "updated_at" = $2 WHERE "borrowings"."id" = $3[0m  [["returned", true], ["updated_at", "2025-02-14 20:04:00.010130"], ["id", 3]]
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mBook Exists? (7.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "9780201633610"], ["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mBook Update (0.6ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", true], ["updated_at", "2025-02-14 20:04:00.044627"], ["id", 19]]
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+Completed 200 OK in 81ms (Views: 0.2ms | ActiveRecord: 32.3ms (6 queries, 0 cached) | GC: 6.3ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 23:20:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 200 OK in 310ms (Views: 0.2ms | ActiveRecord: 14.2ms (1 query, 0 cached) | GC: 18.6ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 23:20:12 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 36.4ms | ActiveRecord: 6.6ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 23:20:12 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 23:20:19 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12", "book"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 23:20:19 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12", "book"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 8.2ms)
+
+
+Started POST "/books/12/borrow" for ::1 at 2025-02-14 23:20:22 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"12", "borrowing"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (3.3ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "due_date", "returned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["book_id", 12], ["due_date", "2025-02-28"], ["returned", false], ["created_at", "2025-02-14 20:20:22.616340"], ["updated_at", "2025-02-14 20:20:22.616340"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "0987654321"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", false], ["updated_at", "2025-02-14 20:20:22.639658"], ["id", 12]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 127ms (Views: 0.5ms | ActiveRecord: 21.4ms (5 queries, 0 cached) | GC: 67.9ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:20:25 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:20:25 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/12" for ::1 at 2025-02-14 23:20:25 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"12", "book"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started PATCH "/books/12/return" for ::1 at 2025-02-14 23:20:28 +0300
+Processing by BorrowingsController#return_book as */*
+  Parameters: {"id"=>"12", "borrowing"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:42:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:31:in `set_book'
+  [1m[36mBorrowing Load (0.7ms)[0m  [1m[34mSELECT "borrowings".* FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."book_id" = $2 AND "borrowings"."returned" = $3 LIMIT $4[0m  [["user_id", 2], ["book_id", 12], ["returned", false], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `return_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mBorrowing Update (4.6ms)[0m  [1m[33mUPDATE "borrowings" SET "returned" = $1, "updated_at" = $2 WHERE "borrowings"."id" = $3[0m  [["returned", true], ["updated_at", "2025-02-14 20:20:28.397738"], ["id", 4]]
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:20:in `return_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mBook Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "0987654321"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mBook Update (0.9ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", true], ["updated_at", "2025-02-14 20:20:28.422693"], ["id", 12]]
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:21:in `return_book'
+Completed 200 OK in 64ms (Views: 0.3ms | ActiveRecord: 15.0ms (6 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:25:23 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 56ms (Views: 0.3ms | ActiveRecord: 19.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:25:23 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 23:28:18 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 6.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 23:28:18 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/15" for ::1 at 2025-02-14 23:28:22 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"15", "book"=>{}}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 9.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/15" for ::1 at 2025-02-14 23:28:22 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"15", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books/15/borrow" for ::1 at 2025-02-14 23:28:24 +0300
+Processing by BorrowingsController#create as */*
+  Parameters: {"id"=>"15", "borrowing"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:37:in `set_book'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mBorrowing Create (2.8ms)[0m  [1m[32mINSERT INTO "borrowings" ("user_id", "book_id", "due_date", "returned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["book_id", 15], ["due_date", "2025-02-28"], ["returned", false], ["created_at", "2025-02-14 20:28:24.081235"], ["updated_at", "2025-02-14 20:28:24.081235"]]
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "books" WHERE "books"."isbn" = $1 AND "books"."id" != $2 LIMIT $3[0m  [["isbn", "9780321584106"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "available" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["available", false], ["updated_at", "2025-02-14 20:28:24.102174"], ["id", 15]]
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/borrowings_controller.rb:8:in `create'
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 16.6ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:28:26 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/current_user" for ::1 at 2025-02-14 23:28:26 +0300
+Processing by SessionsController#show as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/15" for ::1 at 2025-02-14 23:28:26 +0300
+Processing by BooksController#show as */*
+  Parameters: {"id"=>"15", "book"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `show'
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:28:27 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:28:27 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 23:39:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 401 Unauthorized in 56ms (Views: 0.2ms | ActiveRecord: 11.4ms (1 query, 0 cached) | GC: 20.3ms)
+
+
+Started POST "/login" for ::1 at 2025-02-14 23:44:11 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 200 OK in 304ms (Views: 0.1ms | ActiveRecord: 18.9ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 23:44:18 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 39.8ms | ActiveRecord: 6.7ms (2 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2025-02-14 23:44:18 +0300
+Processing by BooksController#index as */*
+  Parameters: {"book"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 9.0ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:44:21 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 162ms (Views: 0.2ms | ActiveRecord: 5.1ms (2 queries, 0 cached) | GC: 120.6ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:44:22 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.8ms (2 queries, 0 cached) | GC: 2.6ms)
+
+
+[dotenv] Set [36mPORT[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2025-02-14 23:50:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 200 OK in 326ms (Views: 0.2ms | ActiveRecord: 13.3ms (1 query, 0 cached) | GC: 18.7ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:50:44 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 56ms (Views: 0.3ms | ActiveRecord: 11.8ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/borrowings/borrowed_books_count" for ::1 at 2025-02-14 23:50:44 +0300
+Processing by BorrowingsController#borrowed_books_count as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/borrowings_controller.rb:48:in `authorize_request'
+  [1m[36mBorrowing Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "borrowings" WHERE "borrowings"."user_id" = $1 AND "borrowings"."returned" = $2[0m  [["user_id", 2], ["returned", false]]
+  ↳ app/controllers/borrowings_controller.rb:17:in `borrowed_books_count'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
