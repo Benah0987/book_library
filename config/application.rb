@@ -10,6 +10,8 @@ module Backend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
+    config.session_store :cookie_store, key: "_your_app_session", same_site: :lax
+
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
@@ -23,5 +25,8 @@ module Backend
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_library_session', same_site: :lax, secure: Rails.env.production?
+config.action_dispatch.cookies_same_site_protection = :lax
+
   end
 end
