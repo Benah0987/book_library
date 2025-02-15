@@ -44,8 +44,8 @@ cd backend
 bundle install
 # 📌 Setup the database
 
-rails db:create db:migrate db:seed
-Note: db:seed adds sample books to the database.
+- rails db:create db:migrate db:seed
+- Note: db:seed adds sample books to the database.
 
 # 📌 Start the Rails server
 
