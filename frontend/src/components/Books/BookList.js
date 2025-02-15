@@ -43,6 +43,9 @@ const BookList = () => {
             <div className="book-info">
               <h3>{book.title}</h3>
               <p>{book.author}</p>
+              <p className={book.available ? "available" : "borrowed"}>
+                {book.available ? "Available" : "Borrowed"}
+              </p>
             </div>
           </Link>
         ))}

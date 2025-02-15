@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./Auth/AuthContext";
 import Navbar from "./Navbar";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Auth/login";
 import Signup from "./Auth/signup";
@@ -10,19 +9,17 @@ import Profile from "./User/Profile";
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/books" element={<BookList />} />
-          <Route path="/books/:id" element={<BookDetails />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/books" element={<BookList />} />
+        <Route path="/books/:id" element={<BookDetails />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </>
   );
 }
 

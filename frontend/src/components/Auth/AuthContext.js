@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export const AuthContext = createContext();
@@ -6,6 +7,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -123,6 +125,8 @@ export const AuthProvider = ({ children }) => {
       text: "You have been successfully logged out.",
       icon: "info",
       confirmButtonText: "OK",
+    }).then(() => {
+      navigate("/"); // Redirect to home after logout
     });
   };
 
